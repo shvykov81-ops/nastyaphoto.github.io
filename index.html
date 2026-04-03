@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Индекс Трафика - Продвижение бизнеса | Неон & Гламур</title>
+    <meta name="description" content="Продвижение сайтов, Яндекс Директ от 3000₽, таргет ВКонтакте от 2000₽, SEO-продвижение от 4990₽, оформление групп ВК от 5990₽. Заявки через 24 часа.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #050505;
+            color: #ffffff;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* ========== НЕОНОВО-ГЛАМУРНЫЕ АНИМАЦИИ ========== */
+        @keyframes neonPulse {
+            0%, 100% {
+                text-shadow: 0 0 5px #ff2a6d, 0 0 10px #ff2a6d, 0 0 15px #e83e8c;
+                box-shadow: 0 0 5px #ff2a6d, 0 0 10px rgba(255, 42, 109, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 15px #ff2a6d, 0 0 25px #ff2a6d, 0 0 35px #e83e8c;
+                box-shadow: 0 0 20px #ff2a6d, 0 0 30px rgba(255, 42, 109, 0.7);
+            }
+        }
+        
+        @keyframes logoGlow {
+            0%, 100% { box-shadow: 0 0 5px #ff2a6d, 0 0 10px #ff2a6d; filter: brightness(1);}
+            50% { box-shadow: 0 0 20px #ff2a6d, 0 0 30px #ff2a6d; filter: brightness(1.2);}
+        }
+
+        @keyframes fadeInUpGlow {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+                filter: blur(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes heroImageFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes heroImageGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 42, 109, 0.4), 0 0 40px rgba(255, 42, 109, 0.2); filter: brightness(1); }
+            50% { box-shadow: 0 0 60px rgba(255, 42, 109, 0.8), 0 0 90px rgba(255, 42, 109, 0.4); filter: brightness(1.08); }
+        }
+
+        @keyframes heroImageReveal {
+            0% { opacity: 0; transform: scale(0.9) translateY(30px); filter: blur(8px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+        }
+        
+        @keyframes glitch {
+            0%, 100% { text-shadow: 0 0 5px #ff2a6d; }
+            25% { text-shadow: -2px 0 #ff2a6d, 2px 0 #00ffff; }
+            50% { text-shadow: 2px 0 #ff2a6d, -2px 0 #00ffff; }
+            75% { text-shadow: 0 0 10px #ff2a6d; }
+        }
+
+        /* Анимации */
+        .btn-primary, .hero-badge { animation: neonPulse 2s infinite; }
+        .logo-icon { animation: logoGlow 2s infinite; }
+        .hero-title .line2 { animation: glitch 3s infinite; }
+        
+        .service-card:hover, .case-item:hover {
+            transform: translateY(-6px);
+            border-color: #ff2a6d;
+            box-shadow: 0 0 25px #ff2a6d;
+        }
+        .service-card, .case-item {
+            animation: fadeInUpGlow 0.6s ease forwards;
+            opacity: 0;
+        }
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .case-item:nth-child(1) { animation-delay: 0.1s; }
+        .case-item:nth-child(2) { animation-delay: 0.2s; }
+        .case-item:nth-child(3) { animation-delay: 0.3s; }
+        .case-item:nth-child(4) { animation-delay: 0.4s; }
+        .case-item:nth-child(5) { animation-delay: 0.5s; }
+
+        /* Фоновые частицы */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, #ff2a6d, transparent);
+            border-radius: 50%;
+            opacity: 0;
+            animation: sparkle 3s infinite;
+        }
+
+        /* ========== ОСНОВНЫЕ СТИЛИ ========== */
+        :root {
+            --black: #050505;
+            --black-card: rgba(10, 10, 10, 0.85);
+            --pink: #e83e8c;
+            --pink-dark: #c2185b;
+            --pink-light: #ff69b4;
+            --pink-neon: #ff2a6d;
+            --gray: #aaaaaa;
+            --gray-light: #dddddd;
+            --border: rgba(255, 42, 109, 0.2);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 12px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--pink-neon), var(--pink));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.4), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #fff, var(--pink-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-contacts {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+
+        .header-phone i { color: var(--pink-neon); font-size: 12px; }
+
+        .social-icons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .social-icon {
+            width: 34px;
+            height: 34px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .social-icon img {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+
+        .social-icon:hover {
+            background: var(--pink-neon);
+            border-color: var(--pink-neon);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+            padding-bottom: 60px;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content { position: relative; z-index: 10; }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 42, 109, 0.15);
+            border: 1px solid rgba(255, 42, 109, 0.5);
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--pink-light);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-title {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .hero-title .line2 {
+            background: linear-gradient(135deg, var(--pink-neon), var(--pink-light), #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 16px 0 12px;
+            display: inline-block;
+            background: linear-gradient(135deg, #fff, var(--pink-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            color: var(--gray-light);
+            margin-bottom: 28px;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 40px;
+            overflow: hidden;
+            animation: heroImageReveal 0.8s ease forwards, heroImageFloat 5s ease-in-out infinite 0.8s;
+            opacity: 0;
+            transform-origin: center;
+        }
+        
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, #ff2a6d, #ff69b4, #e83e8c, #ff2a6d);
+            border-radius: 42px;
+            z-index: -1;
+            opacity: 0.7;
+            transition: opacity 0.4s;
+        }
+        
+        .hero-image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            background: linear-gradient(135deg, rgba(255,42,109,0.3), rgba(232,62,140,0.1));
+            border-radius: 44px;
+            z-index: -2;
+            filter: blur(8px);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 40px;
+            transition: all 0.4s ease;
+            animation: heroImageGlow 4s ease-in-out infinite;
+        }
+
+        .hero-image-wrapper:hover img {
+            transform: scale(1.02);
+            filter: brightness(1.05) saturate(1.1);
+        }
+
+        .hero-gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: -100px;
+            width: 200px;
+            height: 100%;
+            background: linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0.8) 30%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .hero-gradient-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #050505 0%, #050505 40%, rgba(5, 5, 5, 0.7) 60%, rgba(5, 5, 5, 0.3) 100%);
+            pointer-events: none;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--pink-neon), var(--pink-dark));
+            color: white;
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(255, 42, 109, 0.8);
+        }
+
+        /* Sections */
+        .section { padding: 80px 0; position: relative; background: var(--black); }
+        .section-dark { background: linear-gradient(180deg, #050505, #0a0a0a); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .section-title { font-size: 38px; font-weight: 800; margin-bottom: 16px; }
+        .section-title span { background: linear-gradient(135deg, var(--pink-neon), var(--pink-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-subtitle { color: var(--gray); font-size: 17px; max-width: 600px; margin-bottom: 50px; }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--black-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 28px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(255, 42, 109, 0.2), rgba(232, 62, 140, 0.1));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--pink-neon);
+            border: 1px solid rgba(255, 42, 109, 0.3);
+        }
+
+        .service-title { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+        .service-description { color: var(--gray-light); font-size: 13px; line-height: 1.5; margin-bottom: 14px; opacity: 0.8; }
+        .service-price { font-size: 28px; font-weight: 800; color: var(--pink-neon); margin: 14px 0 20px; text-shadow: 0 0 10px rgba(255, 42, 109, 0.5); }
+        .service-price small { font-size: 14px; font-weight: 400; color: var(--gray); }
+        
+        .service-features { list-style: none; margin-bottom: 20px; }
+        .service-features li { padding: 5px 0; color: var(--gray); font-size: 12px; display: flex; align-items: center; gap: 8px; }
+        .service-features li i { color: var(--pink-neon); font-size: 11px; }
+
+        .btn-service {
+            width: 100%;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            color: white;
+            padding: 12px;
+            font-size: 14px;
+        }
+        .btn-service:hover { background: linear-gradient(135deg, var(--pink-neon), var(--pink-dark)); border-color: var(--pink-neon); }
+
+        /* Divider */
+        .divider-image {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            background: #050505;
+            padding: 30px 0;
+        }
+        .divider-image img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            display: inline-block;
+            box-shadow: 0 0 30px rgba(255, 42, 109, 0.2);
+            border-radius: 8px;
+        }
+        .divider-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: linear-gradient(180deg, #050505 0%, transparent 100%);
+            pointer-events: none;
+        }
+        .divider-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: linear-gradient(0deg, #0a0a0a 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        /* Cases */
+        .cases-list { display: flex; flex-direction: column; gap: 40px; }
+        .case-item {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+            background: var(--black-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .case-image {
+            height: 100%;
+            min-height: 260px;
+            overflow: hidden;
+            position: relative;
+        }
+        .case-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .case-item:hover .case-image img { transform: scale(1.05); }
+        .case-content { padding: 28px 28px 28px 0; }
+        .case-title { 
+            font-size: 24px; 
+            font-weight: 800; 
+            margin-bottom: 14px; 
+            color: var(--pink-neon);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .case-description { 
+            color: var(--gray-light); 
+            margin-bottom: 20px; 
+            line-height: 1.6; 
+            font-size: 14px;
+            border-left: 2px solid var(--pink-neon);
+            padding-left: 14px;
+        }
+        .case-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+            background: rgba(255, 42, 109, 0.05);
+            padding: 18px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 42, 109, 0.15);
+        }
+        .case-stat {
+            text-align: center;
+        }
+        .case-stat-value { 
+            font-size: 22px; 
+            font-weight: 800; 
+            color: var(--pink-neon); 
+            text-shadow: 0 0 8px rgba(255, 42, 109, 0.5);
+            display: block;
+        }
+        .case-stat-label { 
+            font-size: 10px; 
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+        .case-stat-highlight {
+            background: linear-gradient(135deg, rgba(255,42,109,0.2), rgba(232,62,140,0.1));
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .case-stat-highlight .case-stat-value {
+            font-size: 24px;
+        }
+
+        /* Form */
+        .form-section {
+            background: linear-gradient(135deg, #050505, #080008);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 60px 0;
+        }
+        .form-wrapper { max-width: 550px; margin: 0 auto; text-align: center; }
+        .form-title { font-size: 34px; font-weight: 800; margin-bottom: 16px; }
+        .form-title span { color: var(--pink-neon); text-shadow: 0 0 15px rgba(255, 42, 109, 0.5); }
+        .form-text { color: var(--gray); margin-bottom: 32px; line-height: 1.6; font-size: 15px; }
+        .form-group { margin-bottom: 20px; }
+        .form-input {
+            width: 100%;
+            padding: 16px 22px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            color: white;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--pink-neon);
+            box-shadow: 0 0 20px rgba(255, 42, 109, 0.4);
+        }
+        
+        /* Checkbox styles */
+        .checkbox-group {
+            margin: 20px 0;
+            text-align: left;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .checkbox-group input {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            accent-color: var(--pink-neon);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .checkbox-group label {
+            font-size: 12px;
+            color: var(--gray);
+            line-height: 1.4;
+            cursor: pointer;
+        }
+        .checkbox-group a {
+            color: var(--pink-neon);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .checkbox-group a:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 5px rgba(255, 42, 109, 0.5);
+        }
+        
+        /* Cookie notice */
+        .cookie-notice {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            z-index: 1000;
+            animation: fadeInUpGlow 0.4s ease;
+        }
+        .cookie-notice p {
+            font-size: 13px;
+            color: var(--gray);
+            flex: 1;
+        }
+        .cookie-notice a {
+            color: var(--pink-neon);
+            text-decoration: none;
+        }
+        .cookie-notice .btn-cookie {
+            background: linear-gradient(135deg, var(--pink-neon), var(--pink-dark));
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .cookie-notice .btn-cookie:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
+        }
+        
+        .btn-form {
+            width: 100%;
+            justify-content: center;
+            padding: 16px;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #030303;
+            padding: 50px 0 30px;
+            border-top: 1px solid var(--border);
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .footer-info { display: flex; flex-direction: column; gap: 10px; }
+        .footer-phone { color: white; text-decoration: none; font-weight: 600; font-size: 18px; }
+        .footer-phone i { color: var(--pink-neon); margin-right: 8px; }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-copyright { text-align: center; padding-top: 30px; border-top: 1px solid var(--border); color: var(--gray); font-size: 13px; }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.97);
+            backdrop-filter: blur(12px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.active { display: flex; }
+        .modal-content {
+            background: linear-gradient(135deg, #0a0a0a, #050505);
+            border: 1px solid rgba(255, 42, 109, 0.4);
+            border-radius: 28px;
+            padding: 40px 32px;
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            animation: fadeInUpGlow 0.3s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            .hero-content { text-align: center; order: 1; }
+            .hero-description { margin: 0 auto 25px; }
+            .hero-image { order: 0; }
+            .hero-image-wrapper { max-width: 380px; }
+            .hero-gradient-overlay { display: none; }
+            .hero { padding-top: 90px; }
+        }
+
+        @media (max-width: 900px) {
+            .container { padding: 0 20px; }
+            .hero { padding-top: 100px; }
+            .hero-title { font-size: 36px; }
+            .hero-subtitle { font-size: 24px; }
+            .hero-badge { font-size: 11px; padding: 6px 16px; }
+            .hero-description { font-size: 15px; }
+            .services-grid { grid-template-columns: 1fr; gap: 20px; }
+            .case-item { grid-template-columns: 1fr; }
+            .case-content { padding: 0 24px 28px 24px; }
+            .case-image { min-height: 200px; }
+            .section { padding: 60px 0; }
+            .section-title { font-size: 30px; }
+            .section-subtitle { font-size: 15px; margin-bottom: 35px; }
+            .header-inner { flex-direction: column; align-items: flex-start; }
+            .header-contacts { width: 100%; justify-content: space-between; }
+            .divider-image { padding: 20px 0; }
+            .divider-image::before, .divider-image::after { height: 20px; }
+            .form-title { font-size: 28px; }
+            .form-text { font-size: 14px; }
+            .cookie-notice { flex-direction: column; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding-top: 130px; min-height: auto; }
+            .hero-title { font-size: 28px; }
+            .hero-subtitle { font-size: 20px; }
+            .hero-image-wrapper { max-width: 260px; }
+            .hero-badge { font-size: 10px; padding: 5px 12px; margin-bottom: 15px; }
+            .hero-description { font-size: 14px; margin-bottom: 20px; }
+            .btn { padding: 12px 24px; font-size: 14px; }
+            .service-card { padding: 20px; }
+            .service-title { font-size: 20px; }
+            .service-price { font-size: 24px; }
+            .case-title { font-size: 20px; }
+            .case-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 14px; }
+            .case-stat-value { font-size: 18px; }
+            .case-stat-highlight .case-stat-value { font-size: 20px; }
+            .form-title { font-size: 24px; }
+            .form-input { padding: 14px 18px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-social { justify-content: center; }
+            .modal-content { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="particles" id="particles"></div>
+
+<!-- Cookie Notice -->
+<div class="cookie-notice" id="cookieNotice">
+    <p>🔒 Мы используем файлы cookie для улучшения работы сайта. Продолжая использование, вы соглашаетесь на <a href="#" id="cookiePolicyLink">обработку cookie-файлов</a>.</p>
+    <button class="btn-cookie" id="acceptCookie">Принимаю</button>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">ИТ</div>
+                <div class="logo-text">ИНДЕКС ТРАФИКА</div>
+            </a>
+            <div class="header-contacts">
+                <a href="tel:+79611067075" class="header-phone">
+                    <i class="fas fa-phone"></i> +7 (961) 106-70-75
+                </a>
+                <div class="social-icons">
+                    <a href="https://vk.ru/traffic332" class="social-icon" target="_blank"><i class="fab fa-vk"></i></a>
+                    <a href="https://t.me/+79611067075" class="social-icon" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    <div class="social-icon" id="max-link">
+                        <img src="images/max-icon.png" alt="MAX">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-gradient-bg"></div>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">КЛИЕНТЫ ИЗ ТАРГЕТА ВКОНТАКТЕ</div>
+            <h1 class="hero-title">
+                <span class="line1">ТРАФИК ИЗ</span>
+                <span class="line2">ВКОНТАКТЕ И ЯНДЕКС</span>
+            </h1>
+            <div class="hero-subtitle">«ПОД КЛЮЧ»</div>
+            <p class="hero-description">
+                Приводим клиентов, а не считаем клики. Заявки уже через 24 часа.
+            </p>
+            <a href="#form" class="btn btn-primary">
+                <i class="fas fa-gem"></i> Получить консультацию <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="hero-image">
+            <div class="hero-image-wrapper">
+                <img src="images/hero-vertical.jpg" alt="Индекс Трафика">
+            </div>
+            <div class="hero-gradient-overlay"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+    <div class="container">
+        <div class="section-title">Наши <span>услуги</span></div>
+        <div class="section-subtitle">Комплексное продвижение с гарантией результата</div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fab fa-yandex"></i></div>
+                <div class="service-title">Яндекс Директ</div>
+                <div class="service-description">Контекстная реклама в Яндекс. Привлекаем клиентов, которые уже ищут вас.</div>
+                <div class="service-price">от 30 000 <small>₽</small></div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Сбор семантики</li>
+                    <li><i class="fas fa-check-circle"></i> Настройка Метрики</li>
+                    <li><i class="fas fa-check-circle"></i> A/B тестирование</li>
+                </ul>
+                <button class="btn btn-service" onclick="openModal()">Заказать <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fab fa-vk"></i></div>
+                <div class="service-title">Таргет ВКонтакте</div>
+                <div class="service-description">Точное попадание в аудиторию. Заявки от 24 часов после запуска.</div>
+                <div class="service-price">от 20 000 <small>₽</small></div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Анализ ЦА</li>
+                    <li><i class="fas fa-check-circle"></i> Создание креативов</li>
+                    <li><i class="fas fa-check-circle"></i> Ретаргетинг</li>
+                </ul>
+                <button class="btn btn-service" onclick="openModal()">Заказать <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="service-title">Разработка сайтов</div>
+                <div class="service-description">SEO-оптимизация и вывод в топ Яндекса. Увеличение трафика.</div>
+                <div class="service-price">от 4 990 <small>₽</small></div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Аудит сайта</li>
+                    <li><i class="fas fa-check-circle"></i> Сбор семантики</li>
+                    <li><i class="fas fa-check-circle"></i> Внутренняя оптимизация</li>
+                </ul>
+                <button class="btn btn-service" onclick="openModal()">Заказать <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-palette"></i></div>
+                <div class="service-title">Оформление групп ВК</div>
+                <div class="service-description">Профессиональное оформление сообщества для привлечения подписчиков.</div>
+                <div class="service-price">от 5 990 <small>₽</small></div>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Дизайн обложки</li>
+                    <li><i class="fas fa-check-circle"></i> Аватар и меню</li>
+                    <li><i class="fas fa-check-circle"></i> Настройка виджетов</li>
+                </ul>
+                <button class="btn btn-service" onclick="openModal()">Заказать <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Divider -->
+<div class="divider-image">
+    <img src="images/background-image 2.jpg" alt="Разделитель">
+</div>
+
+<!-- Cases -->
+<section class="section section-dark" id="cases">
+    <div class="container">
+        <div class="section-title">Наши <span>кейсы</span></div>
+        <div class="section-subtitle">РЕАЛЬНЫЕ ЦИФРЫ. РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ.</div>
+        
+        <div class="cases-list">
+            <!-- Кейс 1. Магазин телефонов -->
+            <div class="case-item">
+                <div class="case-image"><img src="images/case1.jpg" alt="Магазин телефонов"></div>
+                <div class="case-content">
+                    <div class="case-title">МАГАЗИН ТЕЛЕФОНОВ</div>
+                    <div class="case-description">
+                        Стабильная прибыль 250 000 ₽ в месяц. Год работы. Пик — декабрь: 350 000 ₽. Упор на ретаргетинг и прогревающие рассылки.
+                    </div>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <span class="case-stat-value">31 881 ₽</span>
+                            <span class="case-stat-label">БЮДЖЕТ</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="case-stat-value">255</span>
+                            <span class="case-stat-label">СООБЩЕНИЙ</span>
+                        </div>
+                        <div class="case-stat case-stat-highlight">
+                            <span class="case-stat-value">125 ₽</span>
+                            <span class="case-stat-label">ЛИД</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="case-stat-value">21 ₽</span>
+                            <span class="case-stat-label">КЛИК</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Кейс 2. Кухни от производителя -->
+            <div class="case-item">
+                <div class="case-image"><img src="images/case2.jpg" alt="Кухни от производителя"></div>
+                <div class="case-content">
+                    <div class="case-title">КУХНИ ОТ ПРОИЗВОДИТЕЛЯ</div>
+                    <div class="case-description">
+                        Яндекс Директ. Ограниченный бюджет. Настройка на коммерческие запросы и жёсткие минус-слова.
+                    </div>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <span class="case-stat-value">7 786 ₽</span>
+                            <span class="case-stat-label">БЮДЖЕТ</span>
+                        </div>
+                        <div class="case-stat case-stat-highlight">
+                            <span class="case-stat-value">329</span>
+                            <span class="case-stat-label">КОНВЕРСИЙ</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="case-stat-value">24 ₽</span>
+                            <span class="case-stat-label">ЛИД</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Кейс 3. Модульные дома и бани -->
+            <div class="case-item">
+                <div class="case-image"><img src="images/case3.jpg" alt="Модульные дома и бани"></div>
+                <div class="case-content">
+                    <div class="case-title">МОДУЛЬНЫЕ ДОМА И БАНИ</div>
+                    <div class="case-description">
+                        Дорогой товар с длинным циклом сделки. Упор на визуал и UGC-креативы.
+                    </div>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <span class="case-stat-value">34 630 ₽</span>
+                            <span class="case-stat-label">БЮДЖЕТ</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="case-stat-value">213</span>
+                            <span class="case-stat-label">ПОДПИСЧИКОВ</span>
+                        </div>
+                        <div class="case-stat case-stat-highlight">
+                            <span class="case-stat-value">162 ₽</span>
+                            <span class="case-stat-label">ПОДПИСЧИК</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="case-stat-value">27,33 ₽</span>
+                            <span class="case-stat-label">КЛИК</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Кейс 4. Сеть доставки суши и пиццы -->
+            <div class="case-item">
+                <div class="case-image"><img src="images/case4.jpg" alt="Сеть доставки суши и пиццы"></div>
+                <div class="case-content">
+                    <div class="case-title">СЕТЬ ДОСТАВКИ СУШИ И ПИЦЦЫ</div>
+                    <div class="case-description">
+                        Автоворонка с бонусом за подписку, конкурсы, ежедневные сторис с кухни.
+                    </div>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <span class="case-stat-value">40 000 ₽</span>
+                            <span class="case-stat-label">БЮДЖЕТ</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="case-stat-value">158</span>
+                            <span class="case-stat-label">ВСТУПЛЕНИЙ</span>
+                        </div>
+                        <div class="case-stat case-stat-highlight">
+                            <span class="case-stat-value">113</span>
+                            <span class="case-stat-label">ЗАЯВОК</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Кейс 5. Ворота, навесы, заборы -->
+            <div class="case-item">
+                <div class="case-image"><img src="images/case5.jpg" alt="Ворота, навесы, заборы"></div>
+                <div class="case-content">
+                    <div class="case-title">ВОРОТА, НАВЕСЫ, ЗАБОРЫ</div>
+                    <div class="case-description">
+                        Комплексное продвижение в двух каналах. ВКонтакте + Яндекс Директ.
+                    </div>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <span class="case-stat-value">107 000 ₽</span>
+                            <span class="case-stat-label">БЮДЖЕТ (ВК)</span>
+                        </div>
+                        <div class="case-stat case-stat-highlight">
+                            <span class="case-stat-value">690</span>
+                            <span class="case-stat-label">ЛИДОВ (ВК)</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="case-stat-value">36 321 ₽</span>
+                            <span class="case-stat-label">БЮДЖЕТ (ЯН)</span>
+                        </div>
+                        <div class="case-stat case-stat-highlight">
+                            <span class="case-stat-value">396</span>
+                            <span class="case-stat-label">КОНВЕРСИЙ (ЯН)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Form -->
+<section class="form-section" id="form">
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-title">Оставьте <span>заявку</span></div>
+            <div class="form-text">✨ Получите предложение под ваш бизнес ✨<br>Уже завтра — рекомендации от экспертов</div>
+            
+            <form id="callback-form" action="https://formsubmit.co/indextrafica@mail.ru" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="🔥 Новая заявка с сайта Индекс Трафика!">
+                
+                <div class="form-group">
+                    <input type="text" class="form-input" name="Имя" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-input" name="Телефон" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                
+                <!-- Галочка согласия на обработку персональных данных -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consentCheckbox" name="Согласие на обработку" value="Да" required>
+                    <label for="consentCheckbox">
+                        Я соглашаюсь на <a href="#" id="privacyPolicyLink">обработку персональных данных</a> и принимаю условия 
+                        <a href="#" id="userAgreementLink">пользовательского соглашения</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-form" id="submitBtn">
+                    <i class="fas fa-gem"></i> Отправить заявку <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <div class="logo-text" style="font-size: 18px;">ИНДЕКС ТРАФИКА</div>
+                <a href="tel:+79611067075" class="footer-phone"><i class="fas fa-phone"></i> +7 (961) 106-70-75</a>
+                <div style="color: var(--gray); font-size: 13px;">✨ Работаем по всей России ✨</div>
+            </div>
+            <div class="footer-social">
+                <a href="https://vk.ru/traffic332" class="social-icon" target="_blank"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/+79611067075" class="social-icon" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <div class="social-icon" id="max-link-footer">
+                    <img src="images/max-icon.png" alt="MAX">
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">© 2026 Индекс Трафика. Все права защищены. 💎</div>
+    </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <i class="fas fa-gem" style="font-size: 40px; color: #ff2a6d; margin-bottom: 16px;"></i>
+        <h3 style="margin-bottom: 12px; font-size: 24px;">Оставить заявку</h3>
+        <p style="color: #aaa; margin-bottom: 24px;">Менеджер свяжется с вами ✨</p>
+        <input type="text" id="modal-name" placeholder="Ваше имя" style="width: 100%; padding: 14px; margin-bottom: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,42,109,0.3); border-radius: 12px; color: white;">
+        <input type="tel" id="modal-phone" placeholder="Телефон" style="width: 100%; padding: 14px; margin-bottom: 24px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,42,109,0.3); border-radius: 12px; color: white;">
+        <button onclick="submitModal()" style="background: linear-gradient(135deg, #ff2a6d, #c2185b); color: white; border: none; padding: 14px; border-radius: 12px; font-weight: 700; width: 100%; cursor: pointer;">Отправить</button>
+        <button onclick="closeModal()" style="margin-top: 16px; background: none; border: none; color: #666; cursor: pointer;">Закрыть</button>
+    </div>
+</div>
+
+<script>
+    function createParticles() {
+        const container = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const p = document.createElement('div');
+            p.classList.add('particle');
+            const size = Math.random() * 4 + 2;
+            p.style.width = size + 'px';
+            p.style.height = size + 'px';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.top = Math.random() * 100 + '%';
+            p.style.animationDelay = Math.random() * 5 + 's';
+            p.style.animationDuration = Math.random() * 3 + 2 + 's';
+            container.appendChild(p);
+        }
+    }
+    createParticles();
+
+    // Универсальная функция для открытия чата MAX
+    function openMaxChat(event) {
+        event.preventDefault();
+        
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        const isMobile = /android|iphone|ipad|ipod|blackberry|windows phone/i.test(userAgent);
+        
+        if (isMobile) {
+            window.location.href = 'max://user?id=213865976';
+            setTimeout(function() {
+                if (confirm('Приложение MAX не установлено. Перейти на страницу загрузки?')) {
+                    window.location.href = 'https://max.ru/download';
+                }
+            }, 2500);
+        } else {
+            window.open('https://web.max.ru/213865976', '_blank');
+        }
+    }
+    
+    const maxLinkHeader = document.getElementById('max-link');
+    const maxLinkFooter = document.getElementById('max-link-footer');
+    if (maxLinkHeader) maxLinkHeader.addEventListener('click', openMaxChat);
+    if (maxLinkFooter) maxLinkFooter.addEventListener('click', openMaxChat);
+
+    // Cookie Notice
+    const cookieNotice = document.getElementById('cookieNotice');
+    const acceptCookie = document.getElementById('acceptCookie');
+    
+    if (!localStorage.getItem('cookieAccepted')) {
+        cookieNotice.style.display = 'flex';
+    } else {
+        cookieNotice.style.display = 'none';
+    }
+    
+    acceptCookie.addEventListener('click', () => {
+        localStorage.setItem('cookieAccepted', 'true');
+        cookieNotice.style.display = 'none';
+    });
+    
+    // Модальное окно
+    const modal = document.getElementById('modal');
+    function openModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
+    function submitModal() { 
+        alert('✨ Спасибо! Мы свяжемся с вами ✨'); 
+        closeModal(); 
+    }
+    
+    // Валидация формы с проверкой чекбокса
+    const form = document.getElementById('callback-form');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    form.addEventListener('submit', function(e) {
+        const checkbox = document.getElementById('consentCheckbox');
+        if (!checkbox.checked) {
+            e.preventDefault();
+            alert('Пожалуйста, дайте согласие на обработку персональных данных');
+            return false;
+        }
+        setTimeout(() => {
+            alert('✨ Заявка отправлена! Мы свяжемся с вами ✨');
+        }, 100);
+    });
+    
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    
+    // Заглушки для юридических ссылок (можно заменить на реальные страницы)
+    document.getElementById('privacyPolicyLink')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Политика конфиденциальности: Мы собираем только имя и телефон для связи. Данные не передаются третьим лицам.');
+    });
+    document.getElementById('userAgreementLink')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Пользовательское соглашение: Отправляя форму, вы соглашаетесь на получение коммерческих предложений.');
+    });
+    document.getElementById('cookiePolicyLink')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Файлы cookie используются для аналитики и улучшения работы сайта. Вы можете отключить их в настройках браузера.');
+    });
+</script>
+
+</body>
+</html>
